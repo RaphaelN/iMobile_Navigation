@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    >
+    <com.supermap.mapping.MapView
+        android:id="@+id/mapView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        />
+    
+   <LinearLayout
+        android:id="@+id/LinearLayout00"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="15dp"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        >
+         <ImageButton
+            android:id="@+id/btn_start_point"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:background="@drawable/bg_white_round"
+            android:scaleType="centerInside"
+            android:src="@drawable/btn_start_point" />
+        
+        <TextView 
+            android:layout_width="72dp"
+            android:layout_height="20dp"
+            />
+        
+        <ImageButton 
+            android:id="@+id/btn_end_point"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:background="@drawable/bg_white_round"
+            android:src="@drawable/btn_end_point"
+            android:scaleType="centerInside"
+            />
+
+       
+        
+    </LinearLayout>
+    
+    
+
+     <ImageButton 
+            android:id="@+id/btn_clear"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:background="@drawable/bg_white_round"
+            android:src="@drawable/btn_clear"
+            android:scaleType="centerInside"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="15dp"
+            />
+     
+     <ImageButton
+        android:id="@+id/btn_back"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_alignParentLeft="true"
+        android:layout_above="@id/btn_clear"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/bg_white_round"
+        android:scaleType="centerInside"
+        android:src="@drawable/btn_back"
+        android:visibility="gone"
+       />
+       
+    
+    
+    <!-- 右下角 -->
+
+    <!-- 缩小按钮 -->
+
+    <ImageButton
+        android:id="@+id/btn_zoomOut"
+        android:layout_width="68dp"
+        android:layout_height="68dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/btn_zoom_out" 
+        />
+
+    <!-- 放大按钮 -->
+
+    <ImageButton
+        android:id="@+id/btn_zoomIn"
+        android:layout_width="68dp"
+        android:layout_height="68dp"
+        android:layout_above="@id/btn_zoomOut"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/btn_zoom_in" 
+        />
+    
+     <!-- 定位按钮  -->
+    <ImageButton
+        android:id="@+id/btn_location"
+        android:layout_width="68dp"
+        android:layout_height="68dp"
+        android:layout_above="@id/btn_zoomIn"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/btn_location" 
+        />
+    <FrameLayout
+        android:id="@+id/FrameLayout00"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="21dp"
+        >
+    
+        <!-- 查找路径按钮 -->
+        <ImageButton
+            android:id="@+id/btn_path_analyst"
+            android:layout_width="130dp"
+            android:layout_height="42dp"
+            android:layout_gravity="center"
+            android:background="@drawable/btn_path_analyst"
+            />
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            >
+            
+           <ImageButton
+            android:id="@+id/btn_navi_simulation"
+            android:layout_width="130dp"
+            android:layout_height="42dp"
+            android:background="@drawable/btn_navi_simulation"
+            android:visibility="gone"
+            /> 
+            <ImageButton
+                android:id="@+id/btn_navi_real"
+                android:layout_width="130dp"
+                android:layout_height="42dp"
+                android:background="@drawable/btn_navi_real"
+                android:visibility="gone"
+                />
+        </LinearLayout>
+        
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+            
+            <ImageButton
+            android:id="@+id/btn_pause_navigation"
+            android:layout_width="130dp"
+            android:layout_height="42dp"
+            android:layout_gravity="center"
+            android:background="@drawable/btn_pause_navigation"
+            android:visibility="gone"
+            />
+            
+            <ImageButton
+            android:id="@+id/btn_stop_navigation"
+            android:layout_width="130dp"
+            android:layout_height="42dp"
+            android:layout_gravity="center"
+            android:background="@drawable/btn_stop_navigation"
+            android:visibility="gone"
+            />
+        </LinearLayout>
+      
+        <ImageButton
+            android:id="@+id/btn_continue_navigation"
+            android:layout_width="130dp"
+            android:layout_height="42dp"
+            android:layout_gravity="center"
+            android:background="@drawable/btn_continue_navigation"
+            android:visibility="gone"
+            />
+    </FrameLayout>
+</RelativeLayout>
+    
